@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/Content/pages/Salary.js"></script>
+</head>
+
+
+<h2>Employee Salary Entry</h2>
+<label>Employee Name</label>
+<select class="form-control" id="ddlEmployee">
+</select>
+<br>
+<label>Salary</label>
+<input id="txtSalary" placeholder="Enter Salary" type="text" class="form-control">
+<br>
+
+<label>Salary Description</label>
+<input id="txtSalaryMonth" type="text" class="form-control">
+<br>
+<input type="button" id="btn_Submit" value="Submit" onclick="saveSalary()">
+
+<br />
+
+<div class="col-sm-12">
+    <table id="tbl_salary" border="1">
+        <thead>
+        <th>Transaction Id</th>
+        <th>EmployeeId</th>
+        <th>Salary</th>
+        <th>Description</th>
+        <th></th>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>

@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Content/pages/Employee.js"></script>
+<h2>Employee Registration Form</h2>
+<label>First Name</label>
+<input id="txtFirstName" placeholder="Employee First Name" type="text" class="form-control">
+<br>
+<label>Last Name</label>
+<input id="txtLastName" type="text" maxlength="10" placeholder="Employee Last Name" class="form-control">
+<br>
+<label>Department</label>
+<select class="form-control" id="ddlDepartment">
+    <option>IT</option>
+    <option>HR</option>
+    <option>Networking</option>
+    <option>Finance</option>
+</select>
+<br>
+<input type="button" id="btn_Submit" value="Submit" onclick="saveEmployee()">
+
+<div class="col-sm-12">
+    <table id="tbl_employee" border="1">
+        <thead>
+        <th>EmployeeId</th>
+        <th>Fisrt Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th></th>
+        <th></th>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+<div class="container">
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Employee Detail</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <table border="1" class="table-responsive">
+
+                    <tbody>
+
+                     
+                        <tr>
+                            <td>EmployeeId</td>
+                            <td><label id="lblRegId"></label></td>
+
+                            <td>First Name</td>
+                            <td><label id="lblName"></label></td>
+                     
+                            <td>Last Name</td>
+                            <td><label id="lblMobile"></label></td>
+                            <td>Department</td>
+                            <td><label id="lblEmail"></label></td>
+                        </tr>
+
+
+                </table>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
